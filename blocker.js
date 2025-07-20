@@ -1,10 +1,10 @@
 browser.webRequest.onBeforeRequest.addListener(
     function(details) {
         blockList = [
-            "/ptracking?pltype=adhost",
             "doubleclick.net",
             "googleadservices.com",
-            "googlesyndication.com"
+            "googlesyndication.com",
+            "youtube.com/pagead"
         ];
         shouldBlock = blockList.some(domain => details.url.includes(domain));
 
